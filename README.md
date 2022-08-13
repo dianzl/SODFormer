@@ -3,7 +3,7 @@ This is the official implementation of **SODFormer**, a novel multimodal streami
 
 **SODFormer: Streaming Object Detection with Transformers Using Events and Frames**  
 Dianze Li, Jianing Li, and Yonghong Tian, Fellow, IEEE
-![avatar](./imgs/overview.png)
+![image](./imgs/overview.png)
 
 ## Setup
 This code has been tested with Python 3.9, Pytorch 1.7, CUDA 10.1 and cuDNN 7.6.3 on Ubuntu 16.04.
