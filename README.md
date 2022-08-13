@@ -148,8 +148,8 @@ The asynchronous prediction and visualization can be done as follows:
 | Events + Frames | **SODFormer** | Y | Event image + RGB frame | 0.502 | 39.7 | fusion |
 
 ### Demo
-![image](https://github.com/dianzl/SODFormer/blob/master/imgs/motion_blur_demo.gif)
-![image](https://github.com/dianzl/SODFormer/blob/master/imgs/low_light_demo.gif)
+[Low light demo](https://github.com/dianzl/SODFormer/blob/master/imgs/motion_blur_demo.gif)
+[Motion blur demo](https://github.com/dianzl/SODFormer/blob/master/imgs/low_light_demo.gif)
 
 ## Citation
 
