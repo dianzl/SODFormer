@@ -149,6 +149,7 @@ The asynchronous prediction and visualization can be done as follows:
 
 ### Demo
 [Low light demo](https://github.com/dianzl/SODFormer/blob/master/imgs/motion_blur_demo.gif)
+
 [Motion blur demo](https://github.com/dianzl/SODFormer/blob/master/imgs/low_light_demo.gif)
 
 ## Citation
