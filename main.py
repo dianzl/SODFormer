@@ -253,7 +253,7 @@ def main(args):
         if args.output_dir:
             test_save_dir = output_dir / args.exp_method / 'test'
             Path(test_save_dir).mkdir(parents=True, exist_ok=True)
-            test_save_path = test_save_dir / args.result_file
+            test_save_path = test_save_dir / args.eval_file
             utils.save_on_master(coco_evaluator.coco_eval["bbox"].eval, test_save_path)
         return
 
