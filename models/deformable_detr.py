@@ -1,5 +1,5 @@
 """
-Deformable DETR model and criterion classes.
+Our baseline model and criterion classes.
 """
 import torch
 import torch.nn.functional as F

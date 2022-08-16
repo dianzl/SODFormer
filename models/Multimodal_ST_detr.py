@@ -1,3 +1,6 @@
+"""
+Our complete SODFormer model.
+"""
 import torch
 from torch import nn
 from util.misc import MLP, inverse_sigmoid, map_keys_t, match_keywords_t

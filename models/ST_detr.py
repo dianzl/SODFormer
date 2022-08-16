@@ -1,3 +1,6 @@
+"""
+Our Spatio-temporal baseline model.
+"""
 import torch
 from torch import nn
 from util.misc import MLP, inverse_sigmoid, map_keys_s, match_keywords_s, _max_by_axis
