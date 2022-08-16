@@ -47,7 +47,7 @@ def get_args_parser():
                         help='If true, only event stream will be used')
     parser.add_argument('--no_event', default=False, action='store_true',
                         help='If true, only frame stream will be used')
-    parser.add_argument('--event_repre', default='image', type=str, choices=['image', 'voxel'],
+    parser.add_argument('--event_repre', default='image', type=str, choices=['image', 'voxel', 'gray'],
                         help='Event representation of event stream, disabled when no_event is set True')
 
     # * Backbone
