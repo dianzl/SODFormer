@@ -58,6 +58,8 @@ class DVSDetection(Dataset): # load frames and events in a video
                 event = make_color_histo(event, width=346, height=260)
             elif self.event_repre == 'voxel':
                 event = events_to_voxel_grid(event, 3, 260, 346).astype(np.uint8)
+            elif self.event_repre == 'gray':
+                event = events_to_gray_image(event)
             event = Image.fromarray(event)
         else:
             event = None
@@ -190,6 +192,35 @@ def events_to_voxel_grid(events, num_bins, height, width):
     voxel_grid = voxel_grid.transpose(1, 2, 0)
 
     return voxel_grid
+
+
+def events_to_gray_image(events, width=346, height=260):
+    """
+    Build a voxel grid with bilinear interpolation in the time domain from a set of events.
+    :param events: a [N x 4] NumPy array containing one event per row in the form: [timestamp, x, y, polarity]
+    :param num_bins: number of bins in the temporal axis of the voxel grid
+    :param width, height: dimensions of the voxel grid
+    """
+
+    if events.size == 0:
+        gray_image = np.zeros((height, width, 3), np.uint8)
+        return gray_image
+
+    gray_image = np.zeros((height, width), np.float32).ravel()
+
+    xs = events['x'].astype(np.int)
+    ys = events['y'].astype(np.int)
+    pols = events['polarity']
+    pols[pols == 0] = -1  # polarity should be +1 / -1
+    vals = np.ones(xs.shape[0])
+
+    np.add.at(gray_image, xs + ys * width, vals)
+    gray_image = 255 * (1 / (1 + np.exp(-1 / 2 * gray_image)))
+
+    gray_image = np.reshape(gray_image, (1, height, width)).transpose(1, 2, 0).astype(np.uint8)
+    gray_image = np.repeat(gray_image, 3, axis=2)
+
+    return gray_image
 
 
 def make_color_histo(events, img=None, width=346, height=260):
