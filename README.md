@@ -136,16 +136,16 @@ The asynchronous prediction and visualization can be done as follows:
 |:--------:|:------:|:-------------:|:--------------------:|:-----------:|:------------:|:---:|
 | Events | [SSD-events](https://ieeexplore.ieee.org/document/8594119) | N | Event image | 0.221 | 7.2 | - |
 | Events | [NGA-events](https://link.springer.com/chapter/10.1007/978-3-030-58517-4_6) | N | Voxel grid | 0.232 | 8.0 | - |
-| Events | [Deformable DETR](https://arxiv.org/abs/2010.04159) | N | Event image | 0.307 | 21.6 | entss |
-| Events | Spatio-temporal Deformable DETR | Y | Event image | 0.334 | 25.0 | etss |
+| Events | [Deformable DETR](https://arxiv.org/abs/2010.04159) | N | Event image | 0.307 | 21.6 | [e_nt](https://git.openi.org.cn/attachments/9f6b622e-d591-4b19-a485-7082c3eebe9a?type=0) |
+| Events | Spatio-temporal Deformable DETR | Y | Event image | 0.334 | 25.0 | [e_t](https://git.openi.org.cn/attachments/1a128b1e-19ee-4642-ac31-76b4ed5f9902?type=0) |
 | Frames | [YOLOv3](https://arxiv.org/abs/1804.02767) | N | RGB frame | 0.426 | 7.9 | - |
 | Frames | [LSTM-SSD](https://openaccess.thecvf.com/content_cvpr_2018/html/Liu_Mobile_Video_Object_CVPR_2018_paper.html) | Y | RGB frame | 0.456 | 22.4 | - |
-| Frames | Deformable DETR | N | RGB frame | 0.461 | 21.5 | fntss |
-| Frames | Spatio-temporal Deformable DETR | Y | RGB frame | 0.489 | 24.9 | ftss |
+| Frames | Deformable DETR | N | RGB frame | 0.461 | 21.5 | [f_nt](https://git.openi.org.cn/attachments/2d0e771f-ef6e-427f-9301-2b51146ebfc2?type=0) |
+| Frames | Spatio-temporal Deformable DETR | Y | RGB frame | 0.489 | 24.9 | [f_t](https://git.openi.org.cn/attachments/a62a8814-19e3-4fae-92a8-e0abd8ba7671?type=0) |
 | Events + Frames | [MFEPD](https://ieeexplore.ieee.org/abstract/document/8793924/) | N | Event image + RGB frame | 0.438 | 8.2 | - |
 | Events + Frames | [JDF](https://ieeexplore.ieee.org/abstract/document/8784777) | N | Channel image + RGB frame | 0.442 | 8.3 | - |
 | Events + Frames | SODFormer | Y | Voxel grid + RGB frame | 0.491 | 41.5 | - |
-| Events + Frames | **SODFormer** | Y | Event image + RGB frame | 0.504 | 39.7 | fusion |
+| Events + Frames | **SODFormer** | Y | Event image + RGB frame | 0.504 | 39.7 | [SODFormer](https://git.openi.org.cn/attachments/406139dd-81bf-4287-a465-ad92eb46839a?type=0) |
 
 ### Demo
 [Low light demo](https://github.com/dianzl/SODFormer/blob/master/imgs/motion_blur_demo.gif)
