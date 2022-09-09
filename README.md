@@ -134,18 +134,18 @@ The asynchronous prediction and visualization can be done as follows:
 
 | Modality | Method | Temporal cues | Input representation | AP$\_{50}$ | Runtime (ms) | URL |
 |:--------:|:------:|:-------------:|:--------------------:|:-----------:|:------------:|:---:|
-| Events | [NGA-events](https://link.springer.com/chapter/10.1007/978-3-030-58517-4_6) | N | Voxel grid |  |  | - |
-| Events | [LSTM-SSD](https://openaccess.thecvf.com/content_cvpr_2018/html/Liu_Mobile_Video_Object_CVPR_2018_paper.html) | Y | Event image | | | - |
-| Events | [Deformable DETR](https://arxiv.org/abs/2010.04159) | N | Event image | 0.305 | 21.6 | entss |
-| Events | Spatio-temporal Deformable DETR | Y | Event image | 0.331 | 25.0 | etss |
+| Events | [SSD-events](https://ieeexplore.ieee.org/document/8594119) | N | Event image | 0.221 | 7.2 | - |
+| Events | [NGA-events](https://link.springer.com/chapter/10.1007/978-3-030-58517-4_6) | N | Voxel grid | 0.232 | 8.0 | - |
+| Events | [Deformable DETR](https://arxiv.org/abs/2010.04159) | N | Event image | 0.307 | 21.6 | entss |
+| Events | Spatio-temporal Deformable DETR | Y | Event image | 0.334 | 25.0 | etss |
 | Frames | [YOLOv3](https://arxiv.org/abs/1804.02767) | N | RGB frame | 0.426 | 7.9 | - |
-| Frames | LSTM-SSD | Y | RGB frame | 0.456 | 22.4 | - |
+| Frames | [LSTM-SSD](https://openaccess.thecvf.com/content_cvpr_2018/html/Liu_Mobile_Video_Object_CVPR_2018_paper.html) | Y | RGB frame | 0.456 | 22.4 | - |
 | Frames | Deformable DETR | N | RGB frame | 0.461 | 21.5 | fntss |
-| Frames | Spatio-temporal Deformable DETR | Y | RGB frame | 0.487 | 24.9 | ftss |
+| Frames | Spatio-temporal Deformable DETR | Y | RGB frame | 0.489 | 24.9 | ftss |
 | Events + Frames | [MFEPD](https://ieeexplore.ieee.org/abstract/document/8793924/) | N | Event image + RGB frame | 0.438 | 8.2 | - |
 | Events + Frames | [JDF](https://ieeexplore.ieee.org/abstract/document/8784777) | N | Channel image + RGB frame | 0.442 | 8.3 | - |
-| Events + Frames | SODFormer | Y | Voxel grid + RGB frame | | | - |
-| Events + Frames | **SODFormer** | Y | Event image + RGB frame | 0.502 | 39.7 | fusion |
+| Events + Frames | SODFormer | Y | Voxel grid + RGB frame | 0.491 | 41.5 | - |
+| Events + Frames | **SODFormer** | Y | Event image + RGB frame | 0.504 | 39.7 | fusion |
 
 ### Demo
 [Low light demo](https://github.com/dianzl/SODFormer/blob/master/imgs/motion_blur_demo.gif)
