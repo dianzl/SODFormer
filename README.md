@@ -98,7 +98,7 @@ GPUS_PER_NODE=2 ./tools/run_dist_launch.sh 2 ./configs/sodformer.sh
 ### Evaluation
 You can get the pretrained models of SODFormer (the link is in "Quantitative results" session), then run following command to evaluate it on PKU-DAVIS-SOD test dataset:
 ```
-.configs/sodformer.sh --resume <path to pre-trained model> --eval
+./configs/sodformer.sh --resume <path to pre-trained model> --eval
 ```
 You can also run distributed evaluation by using
 ```
