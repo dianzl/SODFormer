@@ -152,6 +152,8 @@ The asynchronous prediction and visualization can be done as follows:
 
 [Motion blur demo](https://github.com/dianzl/SODFormer/blob/master/imgs/low_light_demo.gif)
 
+[Synthetic dataset demo](https://github.com/dianzl/SODFormer/blob/master/imgs/synthetic dataset)
+
 ## Citation
 
 ## Related Repos
