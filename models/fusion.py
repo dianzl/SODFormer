@@ -175,8 +175,9 @@ class TemporalEncoderTransformer(nn.Module):
         for i in range(self.num_ref_frames):
             if i >= memory.shape[0]:
                 break
-            self.src_all.append(memory[start_idx+i][None])
-            self.mask_all.append(mask[start_idx+i][None])
+            mem, mas = memory.detach(), mask.detach()
+            self.src_all.append(mem[start_idx+i][None])
+            self.mask_all.append(mas[start_idx+i][None])
             self.spatial_shapes_all.append([H_t, W_t])
             
         return temporal_memory, mask, spatial_shapes, valid_ratios
